@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+    <div class="head">
+      <img src="https://vuejs.org/images/logo.png" width="100" alt="vue" class="logo" />
+      <h1>Welcome to Vue.js</h1>
+    </div>
     <Basic />
   </div>
 </template>
@@ -47,7 +51,7 @@ code::after {
 
 #app h1 {
   font-weight: 300;
-  margin: 0;
+  margin: 12px 0 24px;
 }
 
 .banner {
@@ -67,7 +71,7 @@ code::after {
 }
 
 .logo {
-  animation: spin 4s 1s infinite linear;
+  animation: spin 10s 2s infinite linear;
 }
 
 @keyframes spin {
