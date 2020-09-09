@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <div class="banner">
-      <img src="https://vuejs.org/images/logo.png" width="100" alt="vue" class="logo" />
-      <h1>Welcome to Vue.js</h1>
-    </div>
+    <Basic />
   </div>
 </template>
 
 <script>
+import Basic from "./components/Basic";
+
 export default {
-  name: "app"
+  name: "app",
+  components: {
+    Basic
+  }
 };
 </script>
 
@@ -18,6 +20,8 @@ export default {
 
 <!-- Global CSS -->
 <style>
+@import url("./css/app.css");
+
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace, serif;
@@ -36,11 +40,12 @@ code::after {
 <!-- It only affect current component -->
 <style scoped>
 #app {
+  padding-top: 24px;
   text-align: center;
+  color: #2c3e50;
 }
 
 #app h1 {
-  color: #2c3e50;
   font-weight: 300;
   margin: 0;
 }

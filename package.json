@@ -21,8 +21,10 @@
     "promise-polyfill": "^6.0.2"
   },
   "devDependencies": {
+    "node-sass": "^4.14.1",
     "poi": "^9.0.0",
     "poi-preset-bundle-report": "^2.0.0",
+    "sass-loader": "^10.0.2",
     "serve": "^6.1.0"
   }
 }
