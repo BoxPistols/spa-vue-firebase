@@ -1,37 +1,18 @@
 <template>
   <div id="app">
-    <div class="head">
-      <img
-        src="https://vuejs.org/images/logo.png"
-        width="20"
-        alt="vue"
-        class="logo"
-      />
-      <p>Welcome to Vue.js</p>
-    </div>
-    <nav class="nav">
-      <router-link to="/">index</router-link>
-      <router-link to="/Contents">Contents</router-link>
-    </nav>
-    <router-view />
-    <!-- 
-    <div class="head">
-      <img src="https://vuejs.org/images/logo.png" width="100" alt="vue" class="logo" />
-      <h1>Welcome to Vue.js</h1>
-    </div>-->
-    <!-- <Basic /> -->
+    <Basic />
   </div>
 </template>
 
 <script>
-import Basic from './components/Basic'
+import Basic from "./components/Basic";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Basic,
-  },
-}
+    Basic
+  }
+};
 </script>
 
 <!-- CSS libraries -->
@@ -39,7 +20,7 @@ export default {
 
 <!-- Global CSS -->
 <style>
-@import url('./css/app.css');
+@import url("./css/app.css");
 
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
@@ -51,7 +32,7 @@ code {
 
 code::before,
 code::after {
-  content: '`';
+  content: "`";
 }
 </style>
 

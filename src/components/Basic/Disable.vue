@@ -1,10 +1,10 @@
 <template>
   <div>
     <p>
-      <button :disabled="submitDisable">{{ button_label }}</button>
+      <button :disabled="submitDisable" :class="{disable : submitDisable}">{{ button_label }}</button>
     </p>
     <p>
-      <button @click="submitDisable = !submitDisable">toggle</button>
+      <button type="submit" @click="submitDisable = !submitDisable">toggle</button>
     </p>
   </div>
 </template>
@@ -25,4 +25,8 @@ export default {
 </script>
 
 <style scoped>
+.disable {
+  background: gainsboro;
+  color: gray;
+}
 </style>
