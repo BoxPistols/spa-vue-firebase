@@ -1,9 +1,13 @@
 <template>
-  <div class="child">
-    <h2>Child</h2>
-    <button @click="say">more on {{ item }}</button>
+<div class="child">
+  <h2>Child</h2>
+  <button @click="say">more on {{ repItem }}</button>
+  <p>Count: {{ item2 }}</p>
+  <p>
+    Add {{ count }}
     <!-- <parent :name="俺" /> -->
-  </div>
+  </p>
+</div>
 </template>
 
 <script>
@@ -11,19 +15,36 @@
 
 export default {
   props: {
-    item: { type: Object }
+    item: {
+      type: String,
+      default: "ほげ",
+      required: true
+    },
+    item2: {
+      type: Number
+    }
+  },
+  computed: {
+    repItem() {
+      return "Mr." + this.item;
+    }
   },
   data() {
-    return {};
+    return {
+      count: 0
+    };
   },
   components: {
     // Parent
   },
-
   methods: {
     say() {
       this.$emit("more");
     }
+    // addNum() {
+    //   //this.$emit("add-nums", this.count + 1);
+    //   this.$emit("add-nums");
+    // }
   }
 };
 </script>
