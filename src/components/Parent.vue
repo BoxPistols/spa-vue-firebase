@@ -1,17 +1,25 @@
 <template>
   <div class="parent">
     <h2>Parent</h2>
-    <child @more.once="sayHi" :item="name" />
-    <p>{{ name }}</p>
+    <child @more.once="sayHi" :item="myitem" />
+    <p>{{ myname }}</p>
+    <!-- <p>{{ name }}</p> -->
   </div>
 </template>
 
 <script>
 import Child from "./Child.vue";
+
 export default {
+  // props: {
+  //   name: {
+  //     type: String
+  //   }
+  // },
   data() {
     return {
-      name: "Mike"
+      myname: "Mike",
+      myitem: "Btn"
     };
   },
   components: {
@@ -19,7 +27,7 @@ export default {
   },
   methods: {
     sayHi() {
-      this.name = this.name + " is Come";
+      this.myname = this.myname + " is Come";
     }
   }
 };
