@@ -3,10 +3,9 @@
     <h2>Loop</h2>
     <ul v-for="user in users" :key="user">
       <li>
-        <UsersProps :some-name="user.name" :some-id="user.id" />
+        <UsersProps :someName="user.name" :someId="user.id" />
       </li>
     </ul>
-    <!-- <UsersProps /> -->
   </div>
 </template>>
 
@@ -19,16 +18,13 @@
 import UsersProps from "./UsersProps.vue";
 
 export default {
-  // props: {
-  //   user: { type: Object },
-  //   userId: { type: Number },
-  //   userName: { type: String }
-  // },
   components: {
     UsersProps
   },
+  methods: {},
   data() {
     return {
+      user_name: this.someName,
       users: [
         {
           id: 0,

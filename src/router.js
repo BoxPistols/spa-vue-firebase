@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Contents from './Contents.vue'
+import Users from './components/Basic/Users'
+import Parent from './components/Parent'
 
 Vue.use(Router)
 
@@ -17,6 +19,16 @@ export default new Router({
       path: '/Contents',
       name: 'Contents',
       component: Contents,
+    },
+    {
+      path: '/Users',
+      name: 'Users',
+      component: Users,
+    },
+    {
+      path: '/Parent',
+      name: 'Parent',
+      component: Parent,
     },
   ],
 })

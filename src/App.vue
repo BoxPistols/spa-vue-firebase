@@ -17,6 +17,12 @@
         <li>
           <router-link to="/Contents">Contents</router-link>
         </li>
+        <li>
+          <router-link to="/Users">Users</router-link>
+        </li>
+        <li>
+          <router-link to="/Parent">Parent</router-link>
+        </li>
       </ul>
     </nav>
     <router-view />

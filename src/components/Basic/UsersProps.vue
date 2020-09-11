@@ -1,5 +1,7 @@
 <template>
-  <span>{{ someId }} : {{ someName }}</span>
+  <div class="div">
+    <span>{{ someId }} : {{ someName }}</span>
+  </div>
 </template>
 
 <script>
