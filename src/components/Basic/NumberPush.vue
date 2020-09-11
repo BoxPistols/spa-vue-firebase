@@ -9,7 +9,7 @@
           </div>
         </template>
 
-        <div class="nums">合計：{{ total_num }} アイテム</div>
+        <div class="nums total">合計：{{ total_num }} アイテム</div>
 
         <div class="push-num">
           <input type="number" v-model="addNum" />
@@ -62,5 +62,10 @@ div {
 }
 input {
   width: 60px;
+}
+.total {
+  font-size: 24px;
+  color: deeppink;
+  font-weight: 600;
 }
 </style>

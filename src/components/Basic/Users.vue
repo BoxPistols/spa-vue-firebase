@@ -1,21 +1,31 @@
 <template>
   <div>
+    <h2>Loop</h2>
     <ul v-for="user in users" :key="user">
-      <li>{{ user }}</li>
+      <li>
+        <UsersProps :some-name="user.name" :some-id="user.id" />
+      </li>
     </ul>
+    <!-- <UsersProps /> -->
   </div>
-</template>
+</template>>
 
 <script>
 /*
  * https://next.json-generator.com/NkSYH-VEY
  * https://next.json-generator.com/api/json/get/NkSYH-VEY
  */
+
+import UsersProps from "./UsersProps.vue";
+
 export default {
-  props: {
-    user: { type: Object },
-    userId: { type: Number },
-    userName: { type: String }
+  // props: {
+  //   user: { type: Object },
+  //   userId: { type: Number },
+  //   userName: { type: String }
+  // },
+  components: {
+    UsersProps
   },
   data() {
     return {
