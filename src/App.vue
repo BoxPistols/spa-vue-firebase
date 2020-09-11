@@ -3,15 +3,21 @@
     <div class="head">
       <img
         src="https://vuejs.org/images/logo.png"
-        width="20"
+        width="50"
         alt="vue"
         class="logo"
       />
       <p>Welcome to Vue.js</p>
     </div>
     <nav class="nav">
-      <router-link to="/">index</router-link>
-      <router-link to="/Contents">Contents</router-link>
+      <ul>
+        <li>
+          <router-link to="/">index</router-link>
+        </li>
+        <li>
+          <router-link to="/Contents">Contents</router-link>
+        </li>
+      </ul>
     </nav>
     <router-view />
     <!-- 

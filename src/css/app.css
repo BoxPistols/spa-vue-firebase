@@ -18,3 +18,17 @@ button {
   background: rgba(99, 200, 218, 0.9);
   color: white;
 }
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: coral;
+}
+nav.nav ul li {
+  display: inline-flex;
+  font-size: 24px;
+  margin: 0 4px;
+}
