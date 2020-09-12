@@ -3,8 +3,8 @@
   <h2>TextCounter</h2>
   <div class="org__text-count">
     <div class="mol__text-count">
-      <textarea class="area" v-model="textNum" cols="30" rows="10"></textarea>
-      <p class="num" :style="{color: cmpColor}">{{ textCount }}</p>
+      <textarea class="area" v-model.trim="textNum" :maxlength="max" :placeholder="setPlaceholder" cols="30" rows="10"></textarea>
+      <p class="num" :style="{color: cmpColor}">{{ textCount }} {{ setMax }}</p>
     </div>
   </div>
 </div>
@@ -14,17 +14,30 @@
 export default {
   data() {
     return {
-      textNum: 'Hello',
+      textNum: '',
+      max: 15,
+      placeholder: "文字以内で入力してください"
     }
   },
   computed: {
-    textCount() {
-      let x = 0
+    setMax() {
       let t = this.textNum.length
       if (t > 0 && t < 15) {
-        return this.textNum.length
+        return '/' + this.max
       } else if (t >= 15) {
-        alert("Stop!")
+        return this.max + this.placeholder
+      }
+      return
+    },
+    setPlaceholder() {
+      return this.max + this.placeholder
+    },
+    textCount() {
+      let t = this.textNum.length
+      if (t > 0 && t < 15) {
+        return t
+      } else if (t >= 15) {
+        return
       }
       return 0
     },
@@ -46,9 +59,12 @@ textarea {
 }
 
 .num {
-  font-size: 24px;
+  display: block;
+  max-width: 200px;
+  margin: 12px auto;
+  padding: 12px;
+  font-size: 20px;
   background-color: teal;
   color: white;
-  padding: 12px;
 }
 </style>

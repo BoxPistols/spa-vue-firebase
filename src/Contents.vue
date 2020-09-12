@@ -1,19 +1,18 @@
 <template>
 <div id="contents">
   <Basic />
-  <TextCounter />
 </div>
 </template>
 
 <script>
 import Basic from "./components/Basic";
-import TextCounter from "./components/TextCounter";
+// import TextCounter from "./components/TextCounter";
 
 export default {
   name: "app",
   components: {
     Basic,
-    TextCounter
+    // TextCounter
   }
 };
 </script>
