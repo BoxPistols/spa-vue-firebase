@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     say() {
-      this.$emit("more");
+      this.$emit("more", this.item2--);
     }
     // addNum() {
     //   //this.$emit("add-nums", this.count + 1);

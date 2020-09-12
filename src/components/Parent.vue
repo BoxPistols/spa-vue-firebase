@@ -1,9 +1,9 @@
 <template>
 <div class="parent">
   <h2>Parent</h2>
-  <child @more.once="sayHi" :item="myitem" :item2="12" />
+  <child @more="sayHi('!')" :item="myitem" :item2="val" />
   <p>{{ myname }}</p>
-  <!-- <p>{{ name }}</p> -->
+  <p>{{ n }}</p>
 </div>
 </template>
 
@@ -14,18 +14,20 @@ export default {
   data() {
     return {
       myname: "Mike",
-      myitem: "Btn"
+      myitem: "Btn",
+      val: 0,
+      n: 0
     };
   },
   components: {
     Child
   },
   methods: {
-    sayHi() {
-      this.myname = this.myname + " is Come";
-    }
-    // mode() {
-    //   alert();
+    // sayHi(s) {
+    //   this.myname = this.myname + s
+    // }
+    // sayHi() {
+    //   this.n += 1
     // }
   }
 };
