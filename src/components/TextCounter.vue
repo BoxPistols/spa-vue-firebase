@@ -4,8 +4,11 @@
   <div class="org__text-count">
     <div class="mol__text-count">
       <textarea class="area" v-model.trim="textNum" :maxlength="max" :placeholder="setPlaceholder" cols="30" rows="10"></textarea>
-      <p class="num" :style="{color: cmpColor}">{{ textCount }} {{ setMax }}</p>
+      <p class="num" :style="{ color: cmpColor }">
+        {{ textCount }} {{ setMax }}
+      </p>
     </div>
+    <p>{{ $data }}</p>
   </div>
 </div>
 </template>
@@ -16,7 +19,7 @@ export default {
     return {
       textNum: '',
       max: 15,
-      placeholder: "文字以内で入力してください"
+      placeholder: '文字以内で入力してください',
     }
   },
   computed: {
@@ -44,10 +47,10 @@ export default {
     cmpColor() {
       let col = 'white'
       if (this.textCount > 15) {
-        return col = 'red'
+        return (col = 'red')
       }
       return col
-    }
+    },
   },
 }
 </script>
