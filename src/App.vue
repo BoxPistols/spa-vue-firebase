@@ -1,38 +1,36 @@
 <template>
-  <div id="app">
-    <div class="head">
-      <img
-        src="https://vuejs.org/images/logo.png"
-        width="50"
-        alt="vue"
-        class="logo"
-      />
-      <p>Welcome to Vue.js</p>
-    </div>
-    <nav class="nav">
-      <ul>
-        <li>
-          <router-link to="/">index</router-link>
-        </li>
-        <li>
-          <router-link to="/Contents">Contents</router-link>
-        </li>
-        <li>
-          <router-link to="/Users">Users</router-link>
-        </li>
-        <li>
-          <router-link to="/Parent">Parent</router-link>
-        </li>
-      </ul>
-    </nav>
-    <router-view />
-    <!-- 
+<div id="app">
+  <div class="head">
+    <img src="https://vuejs.org/images/logo.png" width="50" alt="vue" class="logo" />
+    <p>Welcome to Vue.js</p>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li>
+        <router-link to="/">index</router-link>
+      </li>
+      <li>
+        <router-link to="/Contents">Contents</router-link>
+      </li>
+      <li>
+        <router-link to="/Users">Users</router-link>
+      </li>
+      <li>
+        <router-link to="/Parent">Parent</router-link>
+      </li>
+      <li>
+        <router-link to="/TextCounter">TextCounter</router-link>
+      </li>
+    </ul>
+  </nav>
+  <router-view />
+  <!--
     <div class="head">
       <img src="https://vuejs.org/images/logo.png" width="100" alt="vue" class="logo" />
       <h1>Welcome to Vue.js</h1>
     </div>-->
-    <!-- <Basic /> -->
-  </div>
+  <!-- <Basic /> -->
+</div>
 </template>
 
 <script>
@@ -47,9 +45,9 @@ export default {
 </script>
 
 <!-- CSS libraries -->
+
 <style src="normalize.css/normalize.css"></style>
 
-<!-- Global CSS -->
 <style>
 @import url('./css/app.css');
 
@@ -67,8 +65,6 @@ code::after {
 }
 </style>
 
-<!-- Scoped component css -->
-<!-- It only affect current component -->
 <style scoped>
 #app {
   padding-top: 24px;
@@ -105,6 +101,7 @@ code::after {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

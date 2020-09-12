@@ -1,24 +1,23 @@
 <template>
-  <div id="contents">
-    <Basic />
-  </div>
+<div id="contents">
+  <Basic />
+  <TextCounter />
+</div>
 </template>
 
 <script>
 import Basic from "./components/Basic";
+import TextCounter from "./components/TextCounter";
 
 export default {
   name: "app",
   components: {
-    Basic
+    Basic,
+    TextCounter
   }
 };
 </script>
 
-<!-- CSS libraries -->
-<style src="normalize.css/normalize.css"></style>
-
-<!-- Global CSS -->
 <style>
 @import url("./css/app.css");
 
@@ -36,8 +35,6 @@ code::after {
 }
 </style>
 
-<!-- Scoped component css -->
-<!-- It only affect current component -->
 <style scoped>
 #app {
   padding-top: 24px;
@@ -51,7 +48,7 @@ code::after {
 }
 
 .banner {
-  height: 200px;
+  min-height: 200px;
   background-color: #f6f6f6;
   padding: 50px 10px;
 }
@@ -74,6 +71,7 @@ code::after {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
