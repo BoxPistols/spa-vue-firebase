@@ -1,9 +1,15 @@
 <template>
 <div class="parent">
-  <h2>Parent</h2>
+  <!-- <h2>Parent</h2>
   <child @more="sayHi('!')" :item="myitem" :item2="val" />
   <p>{{ myname }}</p>
-  <p>{{ n }}</p>
+  <p>{{ n }}</p> -->
+
+  <child :item="myitem" :item2="val">
+    <slot></slot>
+  </child>
+
+  <div class="total">{{ val + n}}</div>
 </div>
 </template>
 
@@ -14,7 +20,7 @@ export default {
   data() {
     return {
       myname: "Mike",
-      myitem: "Btn",
+      myitem: "牡丹",
       val: 0,
       n: 0
     };
@@ -23,12 +29,12 @@ export default {
     Child
   },
   methods: {
-    // sayHi(s) {
-    //   this.myname = this.myname + s
-    // }
-    // sayHi() {
-    //   this.n += 1
-    // }
+    sayHi(s) {
+      this.myname = this.myname + s
+    },
+    setVal(s) {
+      this.val = this.val + s
+    }
   }
 };
 </script>
