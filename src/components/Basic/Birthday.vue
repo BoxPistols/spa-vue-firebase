@@ -2,11 +2,14 @@
 <div>
   <div class="org_bd">
     <div class="mol_bd">
-      <div class="now">{{ now }}</div>
-      <div class="name">{{ name }}</div>
-      <div class="birth">{{ dateOfBirth }}</div>
-      <div class="age">{{ age }}</div>
-      <div class="fee"></div>
+      <div class="now">現在：{{ now }}</div>
+      <div class="name">名前：{{ name }}</div>
+      <div class="birth">誕生日：{{ dateOfBirth }}</div>
+      <div class="age">年齢：{{ age }}</div>
+    </div>
+
+    <div class="mol_bd">
+      <div class="fare">料金{{ fare }}円</div>
     </div>
   </div>
 </div>
@@ -48,7 +51,14 @@ export default {
       } else {
         return age - 1
       }
-
+    },
+    // 上記の算出年齢に基いて料金計算
+    fare() {
+      if (this.age >= 20) {
+        return 2000
+      } else {
+        return 1000
+      }
     },
   },
 }
