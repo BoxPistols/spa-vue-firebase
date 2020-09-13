@@ -1,7 +1,7 @@
 <template>
 <div class="parent">
   <h2>Parent</h2>
-  <child @more.once="sayHi" :item="myitem" :item2="12" />
+  <child @more.once="sayHi" :item="myitem" :item2="1" />
   <p>{{ myname }}</p>
   <!-- <p>{{ name }}</p> -->
 </div>
