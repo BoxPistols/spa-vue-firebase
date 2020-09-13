@@ -162,6 +162,6 @@
     "node_modules/node-sass/src/libsass/sass-spec/": true,
     "node_modules/node-sass/src/libsass/installer/": true
   },
-  "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.fontSize": 15
 }

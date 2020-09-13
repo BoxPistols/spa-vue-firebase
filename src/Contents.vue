@@ -1,5 +1,6 @@
 <template>
 <div id="contents">
+  <p>include Basic</p>
   <Basic />
 </div>
 </template>
