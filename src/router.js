@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import Contents from './Contents.vue'
 import Users from './components/Basic/Users'
 import Parent from './components/Parent'
+import TextCounter from './components/TextCounter'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/Parent',
       name: 'Parent',
       component: Parent,
+    },
+    {
+      path: '/TextCounter',
+      name: 'TextCounter',
+      component: TextCounter,
     },
   ],
 })
