@@ -1,6 +1,7 @@
 <template>
 <div>
   <div class="org_bd">
+    <h2>get set </h2>
     <h3>年齢別の料金設定</h3>
     <div class="mol_bd">
       <div class="now">現在：{{ now }}</div>
@@ -20,11 +21,15 @@
     </div>
 
     <h3>もし成人が{{ seijin }}歳で、選挙権が {{ senkyo }}歳からとしたら</h3>
+    <b>get/set</b>
     <div class="mol_bd adults">
       成人<input type="number" v-model="seijin" />
       選挙権<input type="number" v-model="senkyo" />
       年齢<input type="number" v-model="myage" />
       <div class="adult">{{ myage }}歳は {{ adult }}</div>
+
+      <b>computed</b>
+      <p>{{selAge}}</p>
     </div>
   </div>
 </div>
@@ -95,6 +100,7 @@ export default {
        * 年齢別の判定と返り値
        */
       get() {
+        // 条件の設定
         // 20から誕生年を引く -> 0以下であるかどうかの判定をしたい
         const a = this.myage
         const s = this.seijin
@@ -109,9 +115,24 @@ export default {
         }
       },
       set(v) {
+        // ユーザーが選択出来る年齢
         this.myage = v
       },
     },
+    selAge() {
+      const a = this.myage
+      const s = this.seijin
+      const k = this.senkyo
+
+      if (a - s >= 0 && a - k >= 0) {
+        return '成年かつ選挙権あり'
+      } else if (a - s <= 0 && a - k >= 0) {
+        return '未成人でも選挙権あり'
+      } else {
+        return '未成年で選挙権なし'
+      }
+
+    }
   },
 }
 </script>
